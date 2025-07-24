@@ -1,0 +1,6 @@
+```gherkin
+     Feature: WhatWeb on Gruyere
+     Scenario: Identify tech stack
+       Given whatweb is installed
+       When I run "whatweb http://localhost:8008"
+       Then the output should contain "Python"

@@ -1,0 +1,6 @@
+ ```gherkin
+  Feature: Nmap Scan on Gruyere
+  Scenario: Scan ports
+    Given nmap is installed
+    When I run "nmap -sS -p 8008 localhost"
+    Then the output should contain "8008/tcp open"

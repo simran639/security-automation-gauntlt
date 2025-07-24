@@ -1,0 +1,6 @@
+Feature: WhatWeb fingerprinting
+
+  Scenario: Fingerprint Juice Shop tech
+    Given I have whatweb installed
+     When I run "whatweb http://localhost:3000"
+     Then the output should contain "Node.js"

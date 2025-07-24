@@ -1,0 +1,6 @@
+ ```gherkin
+   Feature: XSS test on Gruyere
+   Scenario: Script injection in comment
+     Given Gruyere is running on http://localhost:8008
+     When I launch "curl -s -X POST 'http://localhost:8008/comments.gtl?uid=1234' --data 'comment=<script>alert(1)</script>'"
+     Then the output should not contain "<script>alert(1)</script>"
