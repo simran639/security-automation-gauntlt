@@ -1,5 +1,5 @@
 Feature: WhatWeb fingerprinting
 
   Scenario: Fingerprint Juice Shop tech
-    When I run "whatweb http://localhost:3000"
+    When I run `whatweb http://host.docker.internal:3000`
     Then the output should contain "Node.js"

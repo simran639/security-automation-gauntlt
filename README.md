@@ -23,11 +23,11 @@
    docker run --rm -it security-automation
    ```
 
-   ## Running Tests
-   ```bash
-   ./run-tests.sh
-   ```
-
    ## Target Applications
    - [Juice Shop](https://github.com/juice-shop/juice-shop)
    - [Gruyere](https://google-gruyere.appspot.com/)
+
+   ## Course Completed(LinkedIn)
+   - DevOps Foundations: DevSecOps
+   - DevSecOps: Automated Security Testing
+
