@@ -1,6 +1,5 @@
- ```gherkin
-   Feature: FFUF Directory Bruteforce
-   Scenario: Discover directories
-     Given ffuf is installed
-     When I run "ffuf -u http://localhost:8008/FUZZ -w /usr/share/wordlists/dirb/common.txt"
-     Then the output should contain "200"
+Feature: FFUF Directory Bruteforce
+
+  Scenario: Discover directories
+    When I run `ffuf -u http://host.internal.docker:8008/FUZZ -w /usr/share/wordlists/dirb/common.txt`
+    Then the output should contain "200"

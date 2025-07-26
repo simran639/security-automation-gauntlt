@@ -1,6 +1,5 @@
 Feature: Port scanning with Nmap
 
   Scenario: Basic port scan
-   Given I have nmap installed
-   When I run "nmap -sS -p 3000 localhost"
-   Then the output should contain "3000/tcp open"
+    When I run `nmap -sS -p 3000 host.docker.internal`
+    Then the output should contain "3000/tcp open"

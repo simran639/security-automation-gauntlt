@@ -1,6 +1,5 @@
- ```gherkin
-Feature: Test for XSS on Juice Shop
+Feature: Juice Shop XSS Injection Test
+
 Scenario: Try script injection
-    Given "Juice Shop" is running on "http://localhost:3000"
-    When I launch "curl -s -X GET 'http://localhost:3000/#/search?q=<script>alert(1)</script>'"
-    Then the output should not contain "<script>alert(1)</script>"
+  When I run `curl -s -X GET 'http://host.docker.internal:3000/#/search?q=<script>alert(1)</script>'`
+  Then the output should contain "Search Results"

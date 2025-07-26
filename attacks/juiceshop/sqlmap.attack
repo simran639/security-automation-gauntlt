@@ -1,6 +1,5 @@
 Feature: SQL injection test on Juice Shop
 
   Scenario: SQLmap test login endpoint
-     Given "sqlmap" is installed
-     When I run "sqlmap -u http://localhost:3000/rest/user/login --data 'email=test@a.com&password=test' --batch"
-     Then the exit status should be 0
+    When I run `sqlmap -u http://host.docker.internal:3000/rest/user/login --data 'email=test@a.com&password=test' --batch`
+    Then the exit status should be 0
